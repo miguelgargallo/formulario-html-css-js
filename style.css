@@ -1,0 +1,98 @@
+/* Estilo para el formulario */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Estilo para las etiquetas de los campos */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Estilo para los campos de texto */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilo para los campos de validación */
+#human-validation {
+  width: 50%;
+}
+
+#human-validation-code {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Estilo para los mensajes de error */
+.error-message {
+  margin-top: 5px;
+  color: #c0392b;
+  font-size: 14px;
+}
+
+/* Estilo para el botón de enviar */
+button[type="submit"] {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+/* Estilo para los campos obligatorios */
+:required {
+  border-color: #e74c3c;
+}
+
+:required + label::after {
+  content: "*";
+  color: #e74c3c;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+/* Estilo para los campos deshabilitados */
+:disabled {
+  background-color: #f5f5f5;
+  color: #aaa;
+}
+
+/* Estilo para el mensaje de éxito */
+.success-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #2ecc71;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 16px;
+  text-align: center;
+}

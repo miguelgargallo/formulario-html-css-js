@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulario de contacto</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <h1>Formulario de contacto</h1>
+    <p>Por favor, rellena el siguiente formulario para ponerte en contacto con nosotros.</p>
+    <p>Los campos marcados con <abbr title="Campo obligatorio">*</abbr> son obligatorios.</p>
+    <p>Si lo prefieres, también puedes ponerte en contacto con nosotros a través de los siguientes medios:</p>
+
+    <form id="contact-form">
+        <div>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required minlength="2" pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+" />
+        </div>
+        <div>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required />
+        </div>
+        <div>
+            <label for="phone">Móvil:</label>
+            <input type="tel" id="phone" name="phone" required minlength="9" pattern="[0-9]{9}" />
+        </div>
+        <div>
+            <label for="date">Fecha:</label>
+            <input type="text" id="date" name="date" required pattern="\d{1,2}/\d{1,2}/\d{4}" />
+        </div>
+        <div>
+            <label for="subject">Asunto:</label>
+            <input type="text" id="subject" name="subject" required />
+        </div>
+        <div>
+            <label for="description">Descripción de la consulta:</label>
+            <textarea id="description" name="description"></textarea>
+        </div>
+        <div>
+            <label for="communication-method">Medio de comunicación:</label>
+            <select id="communication-method" name="communication-method" required>
+                <option value="" selected disabled>Selecciona un medio de comunicación</option>
+                <option value="teléfono">Teléfono</option>
+                <option value="whatsapp">Whatsapp</option>
+                <option value="email">Email</option>
+            </select>
+        </div>
+        <div>
+            <label for="human-validation">Validación humana:</label>
+            <input type="text" id="human-validation" name="human-validation" required />
+            <span id="human-validation-code"></span>
+        </div>
+        <div>
+            <input type="checkbox" id="gdpr" name="gdpr" required />
+            <label for="gdpr">He leído y acepto la política de privacidad.</label>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
